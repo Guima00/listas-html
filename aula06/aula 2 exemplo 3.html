@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>lista de presença</h1>
+    <p>nome do aluno: <span id="nome">fulano</span>.</p>
+    <button id="adicionar">Adicionar</button>
+    
+    <h1>presentes:</h1>
+    <ul id="presentes"></ul>
+    <script>
+        var eNome=document.getElementById("nome");
+        var eAdicionar=document.getElementById("adicionar");
+        var ePresentes=document.getElementById("presentes");
+
+        eAdicionar.addEventListener("click",adicionapresente);
+
+        function adicionapresente(){
+            var nome = eNome.textContent;
+            var item = "<li>"+nome+"</li>";
+            ePresentes.innerHTML = ePresentes.innerHTML + item;
+        }
+    </script>
+</body>
+</html>
